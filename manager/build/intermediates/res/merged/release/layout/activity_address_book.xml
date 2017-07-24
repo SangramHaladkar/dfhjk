@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ism.manager.message.AddressBookActivity">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/selected"
+        android:padding="@dimen/app_min_padding">
+
+        <EditText
+            android:id="@+id/ed_FindAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/app_normal_margin"
+            android:layout_weight="0.90"
+            android:background="@drawable/rounded_text"
+            android:drawableLeft="@drawable/search_icon_grey"
+            android:gravity="center_vertical"
+            android:hint="@string/find"
+            android:imeOptions="actionNext"
+            android:maxLength="50"
+            android:padding="@dimen/app_min_padding"
+            android:singleLine="true"
+            android:textColorHint="@color/selected"
+            android:textSize="@dimen/app_edt_txt" />
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="@dimen/app_min_padding"
+            android:text="@string/clear"
+            android:textColor="@color/unselected"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstAddressBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer_button"
+        android:layout_below="@+id/top_layout"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/selected"
+        android:dividerHeight="1dp"></ListView>
+
+    <LinearLayout
+        android:id="@+id/footer_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appBackground"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_normal_padding">
+
+        <TextView
+            android:id="@+id/btnClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/app_min_padding"
+            android:text="@string/clearAll"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/btnSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/app_min_padding"
+            android:text="@string/selectAll"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/app_min_padding"
+            android:text="@string/add"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

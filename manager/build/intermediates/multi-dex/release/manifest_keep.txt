@@ -1,0 +1,39 @@
+-keep class ism.manager.MyDatabaseInstanceHolder {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class ism.manager.SplashActivity { <init>(); }
+-keep class ism.manager.login.LoginActivity { <init>(); }
+-keep class ism.manager.MainActivity { <init>(); }
+-keep class ism.manager.login.ForgotPasswordActivity { <init>(); }
+-keep class ism.manager.login.AgreementActivity { <init>(); }
+-keep class ism.manager.login.ChangePasswordActivity { <init>(); }
+-keep class ism.manager.baseclasses.AppBaseActivity { <init>(); }
+-keep class ism.manager.login.ForgotPasswordConfirmationActivity { <init>(); }
+-keep class ism.manager.ItemListActivity { <init>(); }
+-keep class ism.manager.ItemDetailActivity { <init>(); }
+-keep class ism.manager.message.MessageDetailsActivity { <init>(); }
+-keep class ism.manager.message.ComposeActivity { <init>(); }
+-keep class ism.manager.message.ForwardActivity { <init>(); }
+-keep class ism.manager.message.AddressBookActivity { <init>(); }
+-keep class ism.manager.message.MandatoryMsgReadStatusActivity { <init>(); }
+-keep class ism.manager.message.MandatoryMsgAttachmentActivity { <init>(); }
+-keep class ism.manager.message.MandatoryMessageDetailActivity { <init>(); }
+-keep class ism.manager.schedule.ScheduleDetailsActivity { <init>(); }
+-keep class ism.manager.schedule.RequestOffActivity { <init>(); }
+-keep class ism.manager.schedule.ShiftCommentActivity { <init>(); }
+-keep class ism.manager.message.ShiftAcceptCommentActivity { <init>(); }
+-keep class ism.manager.schedule.ScheduleGiveToActivity { <init>(); }
+-keep class ism.manager.message.TradeSchedulesListActivity { <init>(); }
+-keep class ism.manager.log.LogDetailsActivity { <init>(); }
+-keep class ism.manager.backgroundservices.NotificationServiceForShift { <init>(); }
+-keep class ism.manager.backgroundservices.ServiceForDocumentRead { <init>(); }
+-keep class ism.manager.settings.SettingsDetailsActivity { <init>(); }
+-keep class com.google.android.gms.gcm.GcmReceiver { <init>(); }
+-keep class ism.manager.MyGcmListenerService { <init>(); }
+-keep class ism.manager.MyInstanceIDListenerService { <init>(); }
+-keep class ism.manager.RegistrationIntentService { <init>(); }
+-keep class ism.manager.settings.AboutApp_Activity { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementContentProvider { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(); }

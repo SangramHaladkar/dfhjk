@@ -1,0 +1,1359 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="ism.manager.log.LogDetailsFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollViewLogDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <!-- Header Layout-->
+            <LinearLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/headerbg"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_min_margin"
+                    android:layout_weight="0.90"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/log_for_the_day_of_"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edtLogDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/app_min_margin"
+                            android:background="@drawable/rounded_text"
+                            android:drawablePadding="@dimen/app_min_padding"
+                            android:drawableRight="@drawable/ic_action_calendar"
+                            android:padding="@dimen/app_min_padding"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/location_"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/app_normal_margin"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/entered_date"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtEnteredDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/app_min_margin"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/entered_by"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtEnteredBy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/app_min_margin"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imgCalendar"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginRight="@dimen/app_min_margin"-->
+                <!--android:background="@drawable/ic_action_calendar"-->
+                <!--android:padding="@dimen/app_min_padding" />-->
+
+            </LinearLayout>
+
+            <!-- MangerRole -->
+            <LinearLayout
+                android:id="@+id/mangerRoleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/txtSelectOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="7dp"
+                    android:text="@string/acting_as"
+                    android:textColor="@color/appOrange"
+                    android:textSize="16sp" />
+
+                <ListView
+                    android:id="@+id/lstManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"></ListView>
+
+            </LinearLayout>
+
+            <!-- Flags -->
+            <LinearLayout
+                android:id="@+id/flagsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/flagCountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/flags"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/addFlagBtn"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange" />
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/lstFlags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"></ListView>
+
+            </LinearLayout>
+
+            <!-- Safety Issues -->
+            <LinearLayout
+                android:id="@+id/safetyIssuesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/safetyIssueCountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/safety_issues"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/addSafetyIssueBtn"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/safetyListHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/app_min_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/type"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/person"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/description"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:gravity="center"
+                            android:padding="@dimen/app_min_padding"
+                            android:text="x"
+                            android:textColor="@color/appOrange"
+                            android:textSize="20sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/unselected" />
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/lstSafetyIssues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/app_normal_margin"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@color/appBackground"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <!-- Quality -->
+            <LinearLayout
+                android:id="@+id/qualityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/qualityCommentCountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/quality"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/addQualityCommentBtn"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edCommentQuality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_text"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/app_normal_padding"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnAddQuality"
+                        android:layout_width="56dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/add"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/qualityListHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/app_min_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="0.40"
+                            android:gravity="center_vertical"
+                            android:text="@string/entry_by"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="0.60"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/comment"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:gravity="center"
+                            android:padding="@dimen/app_min_padding"
+                            android:text="x"
+                            android:textColor="@color/appOrange"
+                            android:textSize="20sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/unselected" />
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/lstQualityComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/app_normal_margin"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <!-- Productivity -->
+            <LinearLayout
+                android:id="@+id/productivityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/productivity"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/lstProductivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:background="@color/colorWhite"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/colorWhite" />
+
+                <LinearLayout
+                    android:id="@+id/lylBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/app_normal_margin"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtBankDeposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_normal_margin"
+                        android:text="Bank Deposit Prepared and Secure"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rbnGrpBankDeposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbnYesBankDeposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rbnNoBankDeposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="No"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/edBankDepositComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_normal_margin"
+                        android:background="@drawable/rounded_text"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionDone"
+                        android:maxLength="250"
+                        android:padding="@dimen/app_normal_padding"
+                        android:textSize="14sp">
+
+                        <requestFocus />
+                    </EditText>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Employee Relations -->
+            <LinearLayout
+                android:id="@+id/employeeRelationsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/employeeRelationsTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/employee_relations"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/addEmpRelationsBtn"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/empRelationListHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/app_min_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/type"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/person"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/description"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:gravity="center"
+                            android:padding="@dimen/app_min_padding"
+                            android:text="x"
+                            android:textColor="@color/appOrange"
+                            android:textSize="20sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/unselected" />
+
+                    <ListView
+                        android:id="@+id/lstEmpRelations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/app_normal_margin"
+                        android:background="@color/appBackground"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@color/appBackground"
+                        android:dividerHeight="1dp"
+                        android:listSelector="@android:color/transparent" />
+
+                </LinearLayout>
+
+
+                <!--<ListView-->
+                <!--android:id="@+id/lstEmpRelations"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="@dimen/app_normal_margin"-->
+                <!--android:layout_marginLeft="@dimen/app_normal_margin"-->
+                <!--android:layout_marginRight="@dimen/app_normal_margin"-->
+                <!--android:background="@color/appBackground"-->
+                <!--android:cacheColorHint="@android:color/transparent"-->
+                <!--android:divider="@color/appBackground"-->
+                <!--android:dividerHeight="1dp"-->
+                <!--android:listSelector="@android:color/transparent" />-->
+
+            </LinearLayout>
+
+            <!--Communication -->
+            <LinearLayout
+                android:id="@+id/communicationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/communication"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/urgentIssueLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtUrgentIssues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/urgent_issues"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtUrgentIssuesRemains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="have been called into your supervisor"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/rbnGrpUrgent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbnYesUrgent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbnNoneToReportUrgent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="None To Report"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/msgApprovalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txtMsgAproval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Messages and approval requests have been resolved"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/rbnGrpMsgApproval"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbnYesMsgApproval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbnNoneToResolveMsgApproval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="None To Resolve"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Maintenance/Repair Request -->
+            <LinearLayout
+                android:id="@+id/maintenanceRepairLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/maintenance_repair_request"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtAllNewRepair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="All new repair items have been logged"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+
+                    <RadioGroup
+                        android:id="@+id/rbnGrpRepair"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbnYesRepair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbnNoneToLogRepair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="None To Resolve"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Repairs During Shift-->
+            <LinearLayout
+                android:id="@+id/repairShiftLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/repair_during_shift"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edItemRepaired"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_text"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/app_normal_padding"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnAddRepaired"
+                        android:layout_width="56dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/add"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/repairsListHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/app_min_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="0.40"
+                            android:gravity="center_vertical"
+                            android:text="@string/entry_by"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="0.60"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/repairs"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:gravity="center"
+                            android:padding="@dimen/app_min_padding"
+                            android:text="x"
+                            android:textColor="@color/appOrange"
+                            android:textSize="20sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/unselected" />
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/lstRepairedItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/app_normal_margin"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <!-- Follow Up Items/Reminders-->
+            <LinearLayout
+                android:id="@+id/followUpItemsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/txtFollowsup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/follow_up_items_reminder"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtFollowupItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Follow up items have been logged "
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+
+                    <RadioGroup
+                        android:id="@+id/rbnGrpFollowUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbnYesFollowUp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbnNoneToLogFollowUp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="None To Log"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Additional Note -->
+            <LinearLayout
+                android:id="@+id/additionalNoteLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/headerbg"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:text="@string/additional_notes"
+                        android:textColor="@color/appOrange"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/addNotesBtn"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/app_min_margin"
+                        android:padding="@dimen/app_min_padding"
+                        android:src="@drawable/ic_action_add_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_normal_margin"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edAddNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_text"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/app_normal_padding"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnAddNote"
+                        android:layout_width="56dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/app_min_margin"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/add"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notesListHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/app_min_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="0.40"
+                            android:gravity="center_vertical"
+                            android:text="@string/entry_by"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:layout_weight="0.60"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/note"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/app_min_margin"
+                            android:gravity="center"
+                            android:padding="@dimen/app_min_padding"
+                            android:text="x"
+                            android:textColor="@color/appOrange"
+                            android:textSize="20sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/unselected" />
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/lstAdditionalNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/app_normal_margin"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_marginRight="@dimen/app_normal_margin"
+                    android:background="@color/appBackground"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@android:color/transparent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

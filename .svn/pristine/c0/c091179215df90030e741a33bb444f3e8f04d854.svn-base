@@ -1,0 +1,40 @@
+package ism.manager.customview;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import ism.manager.R;
+
+
+/**
+ * Created by Raj on 22/04/15.
+ */
+public class TransparentProgressDialog extends Dialog {
+
+    TextView message;
+    ProgressBar progressBar;
+
+    public TransparentProgressDialog(Context context,CharSequence msg) {
+        super(context, R.style.TransparentProgressDialog);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.transperent_progressloader, null);
+        message = (TextView) view.findViewById(R.id.progressDialogText);
+        message.setText(msg);
+        setTitle(null);
+        setCancelable(false);
+        setOnCancelListener(null);
+        setContentView(view);
+    }
+
+    public static TransparentProgressDialog show(Context context,CharSequence message) {
+        TransparentProgressDialog transparentProgressDialog = new TransparentProgressDialog(context, message);
+        transparentProgressDialog.show();
+        transparentProgressDialog.setCancelable(false);
+        return transparentProgressDialog;
+    }
+}

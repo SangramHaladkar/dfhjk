@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/mipmap-hdpi/home.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/mipmap-hdpi/home.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/mipmap-hdpi/main_icon.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/mipmap-hdpi/main_icon.png"
+    }
+]

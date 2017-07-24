@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ism.manager">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.mail" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="ism.manager.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="ism.manager.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".MyDatabaseInstanceHolder"
+        android:allowBackup="true"
+        android:icon="@mipmap/main_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--<intent-filter android:autoVerify="true">-->
+
+                <!--<data-->
+                    <!--android:host="app.getassist.com"-->
+                    <!--android:scheme="http" />-->
+                <!--<data-->
+                    <!--android:host="app.getassist.com"-->
+                    <!--android:scheme="https" />-->
+
+                <!--<action android:name="android.intent.action.VIEW" />-->
+
+
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+
+
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+
+                <!--&lt;!&ndash;<data &ndash;&gt;-->
+                <!--&lt;!&ndash;android:host="stafftap.biz" &ndash;&gt;-->
+                <!--&lt;!&ndash;android:scheme="http" /> &ndash;&gt;-->
+
+
+            <!--</intent-filter>-->
+
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@drawable/white"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/white"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".login.ForgotPasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_forgot_password"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.login.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".login.AgreementActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/agreement"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".login.ChangePasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_change_password"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".baseclasses.AppBaseActivity" />
+        <activity
+            android:name=".login.ForgotPasswordConfirmationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_forgot_password"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.login.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ItemDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".message.MessageDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_message_details"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name=".message.ComposeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_compose"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name=".message.ForwardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_forward"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name=".message.AddressBookActivity"
+            android:label="@string/title_activity_address_book"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".message.MandatoryMsgReadStatusActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_mandatory_msg_read_status"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".message.MandatoryMsgAttachmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_mandatory_msg_attachments"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".message.MandatoryMessageDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_mandatory_msg_detail"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".schedule.ScheduleDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_schedule_details"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name=".schedule.RequestOffActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_request_off"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name=".schedule.ShiftCommentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".message.ShiftAcceptCommentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".schedule.ScheduleGiveToActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_schedule_give_to"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".message.TradeSchedulesListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_trade_schedules_list"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".log.LogDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_log_details"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+
+        <service android:name=".backgroundservices.NotificationServiceForShift" />
+        <service android:name=".backgroundservices.ServiceForDocumentRead" />
+
+        <activity
+            android:name=".settings.SettingsDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="ism.manager" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".RegistrationIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".settings.AboutApp_Activity"
+            android:label="@string/about">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ism.manager.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,103 @@
+package ism.manager.baseclasses;
+
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import ism.manager.R;
+import ism.manager.Utility;
+import ism.manager.customview.ToastMessage;
+import ism.manager.customview.TransparentProgressDialog;
+import ism.manager.utils.AlertDialogManager;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class AppBaseFragment extends Fragment {
+    private ToastMessage toastMessage;
+    private TransparentProgressDialog transparentProgressDialog;
+    private int activeBusyTasks = 0;
+    private AlertDialogManager alertDialogManager;
+
+
+    public AppBaseFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        toastMessage = new ToastMessage(getActivity());
+        alertDialogManager = new AlertDialogManager(getActivity());
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+
+    protected void showToast(String msg, int timeDuration) {
+        toastMessage.showToastMsg(msg, timeDuration);
+    }
+
+    protected TransparentProgressDialog showGetTransparentProgressDialog(String msg) {
+        this.activeBusyTasks++;
+        if (this.transparentProgressDialog == null) {
+            return transparentProgressDialog = TransparentProgressDialog.show(getActivity(), msg);
+        } else {
+            return null;
+        }
+    }
+
+    protected void showTransparentProgressDialog(String msg) {
+        this.activeBusyTasks++;
+        if (this.transparentProgressDialog == null) {
+            transparentProgressDialog = TransparentProgressDialog.show(getActivity(), msg);
+        }
+    }
+
+    protected void hideTransparentProgressDialog() {
+        try {
+            this.activeBusyTasks--;
+            if (this.activeBusyTasks < 0) {
+                this.activeBusyTasks = 0;
+            }
+
+            if (this.activeBusyTasks == 0) {
+                if (this.transparentProgressDialog != null) {
+                    this.transparentProgressDialog.dismiss();
+                    this.transparentProgressDialog = null;
+                }
+            }
+        }catch (Exception e){
+            Utility.saveExceptionDetails(getContext(),e);
+            e.printStackTrace();
+        }
+    }
+
+    protected AlertDialogManager getAlertDialogManager() {
+        return this.alertDialogManager;
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+}

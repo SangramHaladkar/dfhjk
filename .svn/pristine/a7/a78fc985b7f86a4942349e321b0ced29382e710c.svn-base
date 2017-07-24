@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "ism.manager"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 12
+        versionName "1.1.29"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile files('libs/additionnal.jar')
+    compile files('libs/ksoap2-android-assembly-2.5.8-jar-with-dependencies.jar')
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'javax.activation:activation:1.1.1'
+    compile 'javax.mail:javax.mail-api:1.5.1'
+    compile 'org.apache.httpcomponents:httpmime:4.2.5'
+    compile 'org.json:json:20151123'
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.hudomju:swipe-to-dismiss-undo:1.0'
+}
+apply plugin: 'com.google.gms.google-services'

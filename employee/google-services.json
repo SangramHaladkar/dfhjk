@@ -1,0 +1,45 @@
+{
+  "project_info": {
+    "project_id": "api-project-54669690417",
+    "project_number": "54669690417",
+    "name": "API Project"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54669690417:android:78599e4c4cfe6eee",
+        "client_id": "android:ism.android",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "ism.android"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqHgT2QjOLUs3g7eV1rO4MEiHnWkPdIKY"
+        }
+      ],
+      "oauth_client": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

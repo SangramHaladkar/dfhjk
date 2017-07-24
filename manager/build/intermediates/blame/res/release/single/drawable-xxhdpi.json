@@ -1,0 +1,290 @@
+[
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_schedules.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_schedules.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_edit.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_edit.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_meeting.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_meeting.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_idea_filled.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_idea_filled.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_email_lite_green.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_email_lite_green.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_new_msg.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_new_msg.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_pin.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_pin.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_attachment_white.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_attachment_white.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_arrow_drop_down.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_arrow_drop_down.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_open_folder.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_open_folder.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_light_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_reply.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_reply.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_exchange.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_exchange.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_clear.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_clear.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_send.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_send.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_arrow_right.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_arrow_right.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_attachment_dark.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_attachment_dark.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_camera.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_camera.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_close_white.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_close_white.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_calendar.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_calendar.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_delete_white.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_delete_white.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_light_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_bulb.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_bulb.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_synch.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_synch.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_light_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_delete.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_tea_break.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_tea_break.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_mode_edit_white.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_mode_edit_white.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_shift.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_shift.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_full_open_on_phone.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_drafts.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_drafts.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_keyboard_return.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_keyboard_return.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_idea_message.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_idea_message.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_light_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_forward.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_forward.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_light_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_new_mm.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_new_mm.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_reply_all.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_reply_all.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_check.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_check.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_mode_edit.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_mode_edit.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_email.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_email.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_add_orange.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_add_orange.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_add_green.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_add_green.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_incomplete.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_incomplete.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_google_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_mailbox.png",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/drawable-xxhdpi/ic_action_mailbox.png"
+    }
+]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="PREFS_NAME">OurstaffingPrefs</string>
+    <string name="REGISTERED_GUID">RegGuid</string>
+    <string name="ORG_ID">OrgID</string>
+    <string name="WEB_SERVICE_LOCATION">ServiceLocation</string>
+    <string name="NOTIFICATION_COUNT">NotificationCount</string>
+    <string name="NEWS_BANNER">NewsBanner</string>
+    <string name="TIMER">Timer</string>
+    <string name="APP_RUNNING">App_Running</string>
+
+</resources>

@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">StaffTAP Employee</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Employee Login</string>
+    <string name="login_name">Login Name</string>
+    <string name="organization">Organization</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="agreement">Agreement</string>
+    <string name="title_activity_forgot_password">Forgot Password ?</string>
+    <string name="title_activity_change_password">Change Password</string>
+    <string name="user_id">User ID</string>
+    <string name="company">Company</string>
+    <string name="sign_help_text">We\'ll help you sign in</string>
+    <string name="next">Next</string>
+    <string name="verify">Verify</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_your_answer_here">Enter your answer here..</string>
+    <string name="enter_your_login_name_here">Enter your login name here..</string>
+
+    <string name="answere_here">Answer Here..</string>
+    <string name="answer">Answer</string>
+    <string name="information_">Information : </string>
+
+    <string name="enter_temporary_pwd">Enter temporary password</string>
+    <string name="enter_new_pwd">Enter new password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="enter_old_password">Enter old password</string>
+    <string name="new_password">New Password</string>
+    <string name="create_new_password">Create New Password</string>
+    <string name="confirm_new_password">Confirm new password</string>
+    <string name="change_password">Change Password</string>
+    <string name="all_fields_required">[ All fields are required ]</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="schedule_fragment">Schedule fragment</string>
+
+    <string name="message_fragment">Message Fragment</string>
+    <string name="document_fragment">Document Fragment</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_reply">Reply</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_idea">Idea</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_complete">Complete</string>
+    <string name="action_cancel">Cancel</string>
+
+
+    <!-- Bottom Tab Text -->
+    <string name="tab_messages">Messages</string>
+    <string name="tab_schedules">Schedules</string>
+    <string name="tab_docs">Docs</string>
+    <string name="tab_logs">Logs</string>
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="title_activity_message_details">Message Details</string>
+    <string name="title_activity_compose">Compose</string>
+    <string name="title_activity_forward">Forward</string>
+    <string name="title_activity_address_book">Address Book</string>
+    <string name="title_activity_mandatory_msg_read_status">Status</string>
+    <string name="title_activity_mandatory_msg_attachments">Attachments</string>
+    <string name="title_activity_mandatory_msg_detail">Mandatory Message Details</string>
+    <string name="title_activity_schedule_details">Schedule Details</string>
+    <string name="title_activity_request_off">Request Off</string>
+    <string name="title_activity_schedule_give_to">Schedule Give To</string>
+    <string name="title_activity_trade_schedules_list">Select Schedule</string>
+    <string name="title_activity_log_details">Log Details</string>
+
+    <string name="action_send">Send</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_picture">Picture</string>
+    <string name="action_mandatory">Mandatory</string>
+    <string name="action_inbox">Inbox</string>
+    <string name="find">Find</string>
+    <string name="selectAll">Select All</string>
+    <string name="select">Select</string>
+    <string name="clearAll">Clear All</string>
+    <string name="add">Add</string>
+    <string name="clear">Clear</string>
+    <string name="attach">Attach</string>
+    <string name="attachments">Attachments</string>
+
+
+    <string name="request_off">Request Off</string>
+
+    <string name="login_details">Login Details</string>
+    <string name="my_info">My Info</string>
+    <string name="contact">Contact</string>
+    <string name="security">Security</string>
+    <string name="about">About</string>
+    <string name="stafftap_android_app">StaffTAP Android App</string>
+    <string name="email">Email</string>
+    <string name="enter_email_here">Enter Email id here</string>
+    <string name="enter_phone_no_here">Enter phone number here</string>
+    <string name="select_sms_address">Select SMS address</string>
+    <string name="mobile_phone">Mobile Phone</string>
+    <string name="sms_address">SMS Address</string>
+    <string name="notify_by_sms">Notify by SMS\t\t</string>
+    <string name="notify_by_email">Notify by Email\t\t</string>
+
+    <string name="login_challenge_1">Login Challenge 1</string>
+    <string name="login_challenge_2">Login Challenge 2</string>
+    <string name="login_challenge_3">Login Challenge 3</string>
+
+    <!-- Log-->
+    <string name="location_">Location\t:</string>
+    <string name="log_for_the_day_of_">Log for the day of\t:</string>
+    <string name="entered_by">Entered By\t:</string>
+    <string name="entered_date">Entered Date\t:</string>
+    <string name="acting_as">Acting As</string>
+    <string name="flags">Flags</string>
+    <string name="assistant_mgr">Assistant Manager</string>
+    <string name="general_mgr">General Manager</string>
+    <string name="manager">Manager</string>
+    <string name="security_issue">Security Issue</string>
+    <string name="employee_relations">Employee Relations</string>
+    <string name="safety_issues">Safety Issues</string>
+
+    <string name="productivity">Productivity</string>
+    <string name="quality">Quality</string>
+    <string name="communication">Communication</string>
+    <string name="urgent_issues"><u>Urgent issues \t</u></string>
+
+    <string name="employee_incident_injury">Employee Incident/Injury</string>
+    <string name="guest_incident_injury">Guest Incident/Injury</string>
+    <string name="major_property_damage">Major Property Damage</string>
+    <string name="major_equipment_issue_breakdown">Major Equipment Issue/Breakdown</string>
+    <string name="maintenance_repair_request">Maintenance/Repair Request</string>
+    <string name="repair_during_shift">Repair During Shift</string>
+    <string name="follow_up_items_reminder">Follow Up Items/Reminder</string>
+    <string name="additional_notes">Additional Notes</string>
+    <string name="add_flag">Add Flag</string>
+
+    <string name="other">Other</string>
+    <string name="enter_other_title">Enter Other Flag Title</string>
+    <string name="plz_enter_other_title">*Please enter Other Flag title</string>
+
+    <string name="type">Type</string>
+    <string name="entry_by">Entry By</string>
+    <string name="comment">Comment</string>
+    <string name="repairs">Repairs</string>
+    <string name="note">Note</string>
+
+    <string name="accidents">Accidents</string>
+    <string name="injuries">Injuries</string>
+
+    <string name="accident">Accident</string>
+    <string name="injury">Injury</string>
+    <string name="propertydamage">PropertyDamage</string>
+    <string name="damage">Damage</string>
+    <string name="property_damage">Property Damage</string>
+    <string name="no_show">No Show</string>
+    <string name="verbal_warning">Verbal Warning</string>
+    <string name="written_warning">Written Warning</string>
+    <string name="approval_pending">Approval Pending</string>
+
+
+
+    <string name="person">Person</string>
+    <string name="description">Description</string>
+    <string name="enter_description_here">Enter description here..</string>
+
+
+    <string name="pwd_change_info">* A new password should be at least 5 characters long and may include letters, numbers or special characters. </string>
+
+    <string name="gcm_send_message">Token retrieved and sent to server! You can now use gcmsender to send downstream messages to this app.</string>
+    <string name="registering_message">Generating InstanceID token...</string>
+    <string name="token_error_message">An error occurred while either fetching the GCM token,sending the fetched token to the server.</string>
+
+    <string name="selected_count">%1$s selected</string>
+
+    <string name="delete_message">Are you sure want to delete the message.</string>
+    <string name="delete_messages">Are you sure want to delete the message(s).</string>
+
+    <string name="deletion_alert">Deletion alert</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="submit">Submit</string>
+    <string name="type_your_comments_here">Type Your Comments here...</string>
+
+
+
+
+
+</resources>

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/fragment_login_details.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/fragment_login_details.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/item_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/item_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/schedule_item_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/schedule_item_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/messages_item_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/messages_item_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/documents_item_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/documents_item_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/settings_item_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/settings_item_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/log_item_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/log_item_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/fragment_password_change.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/fragment_password_change.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/fragment_security.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/fragment_security.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/build/intermediates/res/merged/release/layout-w900dp-v13/fragment_contact.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/manager/src/main/res/layout-w900dp/fragment_contact.xml"
+    }
+]

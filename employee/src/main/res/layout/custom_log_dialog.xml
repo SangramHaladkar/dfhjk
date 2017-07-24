@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appBackground">
+
+                <TextView
+                    android:id="@+id/flag_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Flags"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/appOrange"></TextView>
+
+                <TextView
+                    android:id="@+id/dialogBtnClose"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:background="@color/appBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/app_min_padding"
+                    android:text="X"
+                    android:textColor="@color/appOrange"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <ListView
+                android:id="@+id/dialogFlag_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:divider="#b5b5b5"
+                android:dividerHeight="1dp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/otherFlagEdText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_min_margin"
+                android:background="@drawable/rounded_text"
+                android:hint="@string/enter_other_title"
+                android:padding="@dimen/app_normal_padding"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_min_margin"
+                android:gravity="right"
+                android:text="@string/plz_enter_other_title"
+                android:textColor="@color/appOrange"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appBackground">
+
+
+                <Button
+                    android:id="@+id/dilogBtnAddFlag"
+                    android:layout_width="72dp"
+                    android:layout_height="42dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:textAllCaps="true"
+                    android:background="@color/colorPrimary"
+                    android:text="done"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

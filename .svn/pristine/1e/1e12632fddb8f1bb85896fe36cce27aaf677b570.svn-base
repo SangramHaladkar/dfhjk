@@ -1,0 +1,356 @@
+package ism.manager.schedule;
+
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Color;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckedTextView;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import ism.manager.ActivityStringInfo;
+import ism.manager.MyDatabaseInstanceHolder;
+import ism.manager.R;
+import ism.manager.SplashActivity;
+import ism.manager.Utility;
+import ism.manager.baseclasses.AppBaseActivity;
+import ism.manager.utils.DatabaseConstant;
+import ism.manager.utils.MessageInfo;
+import ism.manager.webservices.ServicesHelper;
+
+public class ScheduleGiveToActivity extends AppBaseActivity {
+
+    //for UI component
+    Button btn_Select;
+    EditText ed_Find;
+    CheckedTextView chkTxtEmployee;
+    ListView lst_Employee;
+    TextView txt_UserName;
+    TextView btn_Clear;
+
+    //Other Class Declaration
+    ActivityStringInfo stringInfo;
+    ServicesHelper servicesHelper;
+
+    //Variable Declaration
+    public static final String INFO = "INFO";
+    ArrayList<HashMap<String, String>> fillmap = new ArrayList<HashMap<String, String>>();
+    Context mContext;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        try {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_schedule_give_to);
+            Intent i = getIntent();
+            stringInfo = (ActivityStringInfo) i.getSerializableExtra(INFO);
+            if (stringInfo == null) {
+                stringInfo = new ActivityStringInfo();
+            }
+            mContext = this;
+            /** Initialize the UI component **/
+            btn_Select = (Button) findViewById(R.id.btnSelect);
+            btn_Clear = (TextView) findViewById(R.id.btnClear);
+
+            ed_Find = (EditText) findViewById(R.id.edFind);
+            lst_Employee = (ListView) findViewById(R.id.lstEmployee);
+            lst_Employee.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
+            if (ActivityStringInfo.strDocRights.equals("") || ActivityStringInfo.strUser_id.equals("")) {
+                new SplashActivity().setValue();
+            }
+
+            if (stringInfo.strCommentForWhich.equals("GT")) {
+                getSupportActionBar().setTitle("Give Shift To");
+            }
+            if (stringInfo.strCommentForWhich.equals("T")) {
+                getSupportActionBar().setTitle("Trade Shift");
+            }
+
+            this.setListeners();
+            this.getRefresh();
+        } catch (Exception e) {
+            Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_schedule_give_to, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_refresh) {
+            this.getRefresh();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void setListeners() {
+        lst_Employee.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+                HashMap<String, String> hasValues = new HashMap<String, String>();
+                hasValues = fillmap.get(position);
+                System.out.println("position====" + hasValues.get(DatabaseConstant.key_USER_ID));
+                ActivityStringInfo.strEmployeeId = hasValues.get(DatabaseConstant.key_USER_ID);
+            }
+        });
+
+        btn_Clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed_Find.setText("");
+            }
+        });
+
+        ed_Find.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                fillmap.clear();
+                searchAddressBookList();
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        btn_Select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    if (ActivityStringInfo.strEmployeeId.equals("")) {
+                        showToast("Please select user name.", Toast.LENGTH_SHORT);
+                    } else {
+                        Intent i = new Intent(getApplicationContext(), ShiftCommentActivity.class);
+                        i.putExtra(INFO, stringInfo);
+                        startActivity(i);
+                        finish();
+                        ScheduleGiveToActivity.this.overridePendingTransition(R.anim.pump_top, R.anim.disappear);
+                    }
+                } catch (Exception e) {
+                    Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    private void getRefresh() {
+        try {
+            new SelectDataTaskForAddressBook().execute();
+        } catch (Exception e) {
+            Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+            e.printStackTrace();
+        }
+    }
+
+    public void searchAddressBookList() {
+        try {
+            if (!ed_Find.getText().toString().trim().equals("")) {
+                if (ActivityStringInfo.AddressBookList.size() > 0) {
+                    for (int i = 0; i < ActivityStringInfo.AddressBookList.size(); i++) {
+                        HashMap<String, String> hasValues = new HashMap<String, String>();
+                        hasValues = ActivityStringInfo.AddressBookList.get(i);
+                        String txtval = ed_Find.getText().toString().trim().toLowerCase();
+                        if ((hasValues.get(DatabaseConstant.key_FIRST_NAME).toString().trim().toLowerCase().contains(txtval) || hasValues.get(DatabaseConstant.key_LAST_NAME).toString().trim().toLowerCase().contains(txtval))) {
+                            HashMap<String, String> values = new HashMap<String, String>();
+                            {
+                                values.put(DatabaseConstant.key_USER_ID, hasValues.get(DatabaseConstant.key_USER_ID).replace("-0", ""));
+                                values.put(DatabaseConstant.key_FIRST_NAME, hasValues.get(DatabaseConstant.key_FIRST_NAME));
+                                values.put(DatabaseConstant.key_LAST_NAME, hasValues.get(DatabaseConstant.key_LAST_NAME));
+                                fillmap.add(values);
+                            }
+                        }
+                    }
+                    fillAddressBookList();
+                }
+            } else {
+                fillAddressBookList();
+            }
+        } catch (Exception e) {
+            Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+            e.printStackTrace();
+        }
+    }
+
+    private class SelectDataTaskForAddressBook extends AsyncTask<String, Void, String> {
+        public String strMsg = "";
+
+        // can use UI thread here
+        protected void onPreExecute() {
+            try {
+                showTransparentProgressDialog(MessageInfo.loading);
+            } catch (Exception e) {
+                Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+                e.printStackTrace();
+            }
+        }
+
+        // automatically done on worker thread (separate from UI thread)
+        protected String doInBackground(String... args) {
+            servicesHelper = new ServicesHelper();
+            try {
+                String strShiftType = "";
+                if (stringInfo.strCommentForWhich.equals("GT"))
+                    strShiftType = "G";
+                if (stringInfo.strCommentForWhich.equals("T"))
+                    strShiftType = "T";
+                strMsg = servicesHelper.getAddressRecordForShiftTrade(mContext, stringInfo.getSelectedId(), strShiftType);
+            } catch (Exception e) {
+                Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+                e.printStackTrace();
+            }
+            return "";
+        }
+
+        // can use UI thread here
+        protected void onPostExecute(final String result) {
+            try {
+                hideTransparentProgressDialog();
+                if (!strMsg.equals("true")) {
+                    if (Utility.Connectivity_Internet(mContext)) {
+                        if (!strMsg.equals(""))
+                            showToast(strMsg, Toast.LENGTH_SHORT);
+                    } else
+                        showToast(MessageInfo.strError, Toast.LENGTH_SHORT);
+                } else {
+                    fillAddressBookList();
+                }
+            } catch (Exception e) {
+                Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void getAddressBookRecord() {
+        bindAdapter();
+        fillAddressBookList();
+    }
+
+    public void bindAdapter() {
+
+        try {
+            /** Get the message Detail File Attachment List**/
+            ActivityStringInfo.AddressBookList.clear();
+            Cursor c = MyDatabaseInstanceHolder.getDatabaseHelper().getAddressBookRecord();
+            if (c.getCount() > 0) {
+                while (c.moveToNext()) {
+                    HashMap<String, String> map = new HashMap<String, String>();
+                    map.put(DatabaseConstant.key_USER_ID, c.getString(0));
+                    map.put(DatabaseConstant.key_FIRST_NAME, c.getString(1));
+                    map.put(DatabaseConstant.key_LAST_NAME, c.getString(2));
+                    ActivityStringInfo.AddressBookList.add(map);
+                }
+            }
+            c.close();
+        } catch (Exception e) {
+            Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+            e.printStackTrace();
+        }
+    }
+
+    public void fillAddressBookList() {
+        try {
+            if (!ed_Find.getText().toString().trim().equals("")) {
+                lst_Employee.setAdapter(new MyArrayAdapter(this, R.layout.listitem_schedule_shift_select, fillmap));
+                Utility.setListViewHeightBasedOnChildren(mContext, lst_Employee);
+            } else {
+                fillmap = new ArrayList<HashMap<String, String>>();
+                if (ActivityStringInfo.AddressBookList.size() > 0) {
+                    for (int i = 0; i < ActivityStringInfo.AddressBookList.size(); i++) {
+                        HashMap<String, String> hasValues = new HashMap<String, String>();
+                        hasValues = ActivityStringInfo.AddressBookList.get(i);
+                        //String userId = ActivityStringInfo.strUser_id+"-0";
+                        HashMap<String, String> values = new HashMap<String, String>();
+                        {
+                            values.put(DatabaseConstant.key_USER_ID, hasValues.get(DatabaseConstant.key_USER_ID).replace("-0", ""));
+                            values.put(DatabaseConstant.key_FIRST_NAME, hasValues.get(DatabaseConstant.key_FIRST_NAME));
+                            values.put(DatabaseConstant.key_LAST_NAME, hasValues.get(DatabaseConstant.key_LAST_NAME));
+                            fillmap.add(values);
+                        }
+                    }
+                }
+                lst_Employee.setAdapter(new MyArrayAdapter(this, R.layout.listitem_schedule_shift_select, fillmap));
+                Utility.setListViewHeightBasedOnChildren(mContext, lst_Employee);
+            }
+        } catch (Exception e) {
+            Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Display the Address Book
+     **/
+    @SuppressWarnings("unchecked")
+    private class MyArrayAdapter extends ArrayAdapter<HashMap<String, String>> {
+        private List<HashMap<String, String>> myData = new ArrayList<HashMap<String, String>>();
+
+        public MyArrayAdapter(Context context, int textViewResourceId, List<HashMap<String, String>> objects) {
+            super(context, textViewResourceId, objects);
+            context = getContext();
+            myData = objects;
+        }
+
+        @Override
+        public View getView(final int position, View convertView, ViewGroup parent) {
+            View v = convertView;
+            try {
+                if (v == null) {
+                    LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    v = inflater.inflate(R.layout.listitem_schedule_shift_select, null);
+                }
+                final HashMap<String, String> hasValues = myData.get(position);
+                txt_UserName = (TextView) v.findViewById(R.id.chkTxtEmployee);
+
+                if (hasValues != null) {
+                    txt_UserName.setText(hasValues.get(DatabaseConstant.key_FIRST_NAME) + "  " + hasValues.get(DatabaseConstant.key_LAST_NAME));
+                }
+
+                if (position % 2 == 0) {
+                    txt_UserName.setBackgroundColor(Color.parseColor("#cccccc"));
+                    txt_UserName.setTextColor(Color.parseColor("#000000"));
+                } else {
+                    txt_UserName.setBackgroundColor(Color.parseColor("#00000000"));
+                    txt_UserName.setTextColor(Color.parseColor("#005595"));
+                }
+            } catch (Exception e) {
+                Utility.saveExceptionDetails(ScheduleGiveToActivity.this, e);
+                e.printStackTrace();
+            }
+
+            return v;
+        }
+    }
+}

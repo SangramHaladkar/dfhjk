@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollViewDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appBackground">
+
+                <TextView
+                    android:id="@+id/issue_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Flags"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/appOrange"></TextView>
+
+                <TextView
+                    android:id="@+id/dialogBtnClose"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:background="@color/appBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/app_min_padding"
+                    android:text="X"
+                    android:textColor="@color/appOrange"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/issueRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/appBackground"
+                android:checkedButton="@+id/textNoRadio"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/issueOneRadioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/app_min_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_issue_radio_button"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/accidents"
+                    android:textAllCaps="true"
+                    android:textColor="@drawable/tab_selector_text_term"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/issueTwoRadioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/app_min_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_issue_radio_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/injuries"
+                    android:textAllCaps="true"
+                    android:textColor="@drawable/tab_selector_text_term"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/issueThreeRadioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_issue_radio_button"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/property_damage"
+                    android:textAllCaps="true"
+                    android:textColor="@drawable/tab_selector_text_term"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/appOrange" />
+
+            <TextView
+                android:id="@+id/txtQuestionIssue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_min_margin"
+                android:padding="@dimen/app_normal_padding"
+                android:text="Did any employee injuries occurred?"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <Spinner
+                android:id="@+id/spinnerPersonList"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="@dimen/app_min_margin"
+                android:layout_marginLeft="5dp"></Spinner>
+
+            <EditText
+                android:id="@+id/edDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_min_margin"
+                android:background="@drawable/rounded_text"
+                android:gravity="top"
+                android:hint="@string/enter_description_here"
+                android:maxLength="250"
+                android:minHeight="200dp"
+                android:padding="@dimen/app_normal_padding"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_min_margin"
+                android:gravity="right"
+                android:text="@string/plz_enter_other_title"
+                android:textColor="@color/appOrange"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appBackground">
+
+
+                <Button
+                    android:id="@+id/btnAddIssue"
+                    android:layout_width="72dp"
+                    android:layout_height="42dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/add"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

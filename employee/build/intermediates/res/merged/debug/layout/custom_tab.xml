@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@string/font_fontFamily_medium"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:textColor="@color/colorBlack"
+    android:textSize="@dimen/tab_label">
+
+    <ImageView
+        android:id="@+id/tabIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/tabmessageicon_unselected" />
+
+    <TextView
+        android:id="@+id/tabText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/unselected"
+        android:layout_gravity="center_horizontal"
+        android:text="Message"
+        android:textSize="12sp" />
+
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:textSize="@dimen/tab_label"
+        android:fontFamily="@string/font_fontFamily_medium"/>-->

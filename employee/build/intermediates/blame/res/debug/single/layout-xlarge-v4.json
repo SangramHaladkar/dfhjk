@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/layout-xlarge-v4/activity_main.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/layout-xlarge/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/layout-xlarge-v4/activity_splash.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/layout-xlarge/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/layout-xlarge-v4/activity_login.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/layout-xlarge/activity_login.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/layout-xlarge-v4/listitem_log_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/layout-xlarge/listitem_log_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/layout-xlarge-v4/list_message_address_book.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/layout-xlarge/list_message_address_book.xml"
+    }
+]

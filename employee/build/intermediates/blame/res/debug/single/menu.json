@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_messages_list.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_messages_list.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_item_details_fragments.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_item_details_fragments.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_composemail.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_composemail.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_log_details.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_log_details.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_forgotpwd.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_forgotpwd.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_cab_recyclerview.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_cab_recyclerview.xml"
+    },
+    {
+        "merged": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/build/intermediates/res/merged/debug/menu/menu_schedule_give_to.xml",
+        "source": "/Users/Sangram/Mobifilia/AndroidProjects/StaffTAP/StaffTAP New/employee/src/main/res/menu/menu_schedule_give_to.xml"
+    }
+]

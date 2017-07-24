@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@color/colorWhite"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context="ism.manager.ItemListActivity">
+
+    <!--
+    This layout is a two-pane layout for the Items
+    master/detail flow.
+    
+    -->
+    <FrameLayout
+        android:id="@+id/schdl_item_list_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scheduleItem_list"
+            android:name="ism.manager.fragments.MessagesFragment"
+            android:layout_width="@dimen/item_width"
+            android:background="@color/appBackground"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/app_min_margin"
+            android:layout_marginRight="@dimen/app_min_margin"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="ism.manager.ItemListActivity"
+            tools:listitem="@layout/listitem_schedule_shift" />
+
+        <Button
+            android:id="@+id/btnRequestOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/app_min_padding"
+            android:text="@string/request_off"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/schdl_item_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+    </FrameLayout>
+
+</LinearLayout>

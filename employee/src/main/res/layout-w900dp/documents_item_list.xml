@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context="ism.manager.ItemListActivity">
+
+    <!--
+    This layout is a two-pane layout for the Items
+    master/detail flow.
+    
+    -->
+    <FrameLayout
+        android:id="@+id/doc_item_list_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/documentItem_list"
+            android:name="ism.manager.document.DocumentFragment"
+            android:layout_width="@dimen/item_width"
+            android:layout_height="match_parent"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:paddingLeft="@dimen/app_min_margin"
+            android:paddingRight="@dimen/app_min_margin"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="ism.manager.ItemListActivity"
+            tools:listitem="@layout/list_item_documents_list" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/doc_item_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/pathScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/headerbg">
+
+                <LinearLayout
+                    android:id="@+id/locationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_normal_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:text="Location: "
+                        android:textColor="@color/textcolor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtDocs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingBottom="@dimen/app_normal_padding"
+                        android:paddingTop="@dimen/app_normal_padding"
+                        android:text="Docs"
+                        android:textColor="#005595"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/dynamicLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/app_normal_padding"
+                        android:paddingTop="@dimen/app_normal_padding" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--<ListView-->
+            <!--android:id="@+id/docItemListView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingLeft="@dimen/app_min_margin"-->
+            <!--android:paddingRight="@dimen/app_min_margin"-->
+            <!--android:visibility="gone"-->
+            <!--tools:listitem="@layout/list_item_documents_list" />-->
+
+            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/documentItemDetails_list"
+                android:name="ism.manager.document.DocumentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/activatedBackgroundIndicator"
+                android:paddingLeft="@dimen/app_min_margin"
+                android:paddingRight="@dimen/app_min_margin"
+                app:layoutManager="LinearLayoutManager"
+                tools:context="ism.manager.ItemListActivity"
+                tools:listitem="@layout/list_item_documents_list" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
